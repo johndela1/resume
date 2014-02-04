@@ -2,21 +2,20 @@
 \newsectionwidth{0pt}
 \begin{document}
 \name{John de la Garza}
-\address{Westminster, CA  92683 \\ email: dev@jjdev.com \\ cell: 714 305 8512,
-home: 714 895 6311}
+\address{Westminster, CA  92683 \\ email: dev@jjdev.com \\ phone: 657 400 9422}
 
 \begin{resume}
 
 \section{\centerline{OBJECTIVE}}
 A position as a developer that will utilize my programming and
 systems skills in a Unix or Unix like (Linux, BSD, Solaris, etc)
-environment
+environment.  I am willing to relocate for the right job.
 
 \section{\centerline{LANGUAGES}}
-C, Python, Bash, Lua, Java, IA32 assembly, Javascript, \LaTeX
+C, Python, Bash, Scheme, \LaTeX, Lua, IA32 assembly
 
-\section{\centerline{OPERATING SYSTEMS}} Linux, OS X, BSD UNIX,
-Solaris (x86 and SPARC)
+\section{\centerline{SYSTEMS}} Linux (x86, ARM, PPC), OpenBSD, U-Boot
+(especially interested in Linux kernel)
 
 \section{\centerline{EDUCATION}}
 Cal State Fullerton\\ BA Management Information Systems, 1997\\
@@ -26,11 +25,35 @@ Dean's List
 {\sl TVplus} \hfill August 2012 to January 29 2014\\
 Orange, CA
 \begin{itemize}
-\item Wrote lots of python code that transformed data from different sources
-(TMS, Freebase, DBpedia) into in house models (sqlalchemy, postgresql, mongodb)
+\item Designed, documented, and wrote a set of programs that would fetch
+data from third party sources (Freebase, DBpedia, etc) and transform it
+for local use.  This involved meeting with the higher ups and figuring
+out how they needed the data presented.  Once decided upon, I created
+the data structures and wrote the code.
+This envovlved prototyping two ideas then ruling one out after getting
+more feedback.  There was a program to grab the raw data and write
+it to a local
+database.  The next program transformed it to a data structure that
+was smaller and just enough for the presentation.  This new structure
+was stored in the local database for direct use by the presentation layer.
+The presentation
+was accessed from a REST api.  The presentation code would do some
+minor transforms (flatening or showing a specific node in the tree) on
+the stored data and present it.
+
+
+I used SQL Expression Language (SQLAlchemy) on PostgreSQL.  The whole
+thing ran on Linux.
+\item TMS parser scraper
+
 \item automated the task of adding blank inserts and mutting
 videos (ffmpeg, python)
-\item mainted several linux servers: staging, dev, gateway, iptables
+\item I was resonsible for the systems admin tasks for our in house
+network and servers.  All server ran linux.  I dealt with routing,
+firewall, working with ISP, DNS,
+installing software, etc.  We ran several databases, a git server over ssh,
+iptables, BIND.
+\item participated in peer reviews of code
 \end{itemize}
 
 
@@ -68,8 +91,7 @@ Huntington Beach, CA
 \begin{itemize}
 \item Installed Linux (CentOS) and did basic admin tasks
 \item Worked on control software that was used in maintaining salt
-levels in nutrient solution and logging data from sensors using PI controller
-feedback loop
+levels in nutrient solution and logging data from sensors
 \item These data provided inputs to be used in making small adjustments
 to prevent large swings in salinity
 \item Linux, GCC, GNU Binutils, U-boot, ARM
@@ -156,7 +178,8 @@ Santa Barbara, CA
 \begin{itemize}
 \item Maintained and tested Linux kernel to run on an embedded
 system (ARM) for use in automotive industry
-\item Involved forward porting of existing patches, and locating and applying new patches
+\item Involved forward porting of existing patches, and locating and applying
+new patches
 \item  Linux on ARM, C, GCC, Bash, U-Boot
 \end{itemize}
 
@@ -212,18 +235,6 @@ hardware locks in a batch job instead of individually and automatically
 printed out corresponding labels
 \item  Solaris, MS-DOS, C/C++, Pascal, shell
 \end{itemize}
-
-\section{\centerline{BACKGROUND INFORMATION}}
-I have always had an interest in computers and physics.  When I was
-14 years old, I developed, maintained and operated a computer
-bulletin board system with custom software and hardware.  I received
-calls and inquiries from users throughout the United States.  I
-have formalized my computer knowledge by attending classes in C,
-C++, Unix, Database Design, System Analysis and Design, Statistics,
-Calculus and various business courses.   During my senior year at
-Cal State Fullerton, because of my performance and abilities, I
-received the honor of being the single student that was selected
-to make a formal presentation of my final database project.
 
 Bilingual in English and Spanish
 
