@@ -1,0 +1,28 @@
+I am someone who really enjoys programming and playing with computers
+in general.  I am most comfortable in a Linux environment, although
+I have done work with other Unix variants.  My favorite languages are
+Python, C, and Scheme.  I have never used Scheme for more than a
+learning tool, but have learned a lot about making programs easier
+to debug in other languages by thinking about things from a functional
+point of view.
+
+I would consider my self someone who has worked on the full stack.  I've
+worked on projects where I was responsible for the database server,
+schema, middle layer code, web server, router/firewall, and even some front
+end javascript.
+
+I prefer a position where I am given some control over how to
+impliment the details, but have no problem learning new ways of doing
+things.
+
+I've done a lot of programming
+	I've been the lead on several projects
+	I understand requirements change as the development process
+		reveals more insights.
+
+
+I've been a sysadmin
+	installed linux
+	ran BIND, etc
+
+
