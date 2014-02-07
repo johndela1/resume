@@ -2,14 +2,14 @@
 \newsectionwidth{0pt}
 \begin{document}
 \name{John de la Garza}
-\address{Westminster, CA  92683 \\ email: dev@jjdev.com \\ phone: 657 400 9422}
+\address{Westminster, CA  92683 \\ email: john@jjdev.com \\ phone: 657 400 9422}
 
 \begin{resume}
 \thispagestyle{empty}
 
 \section{\centerline{OBJECTIVE}}
 A position that will utilize my programming and systems skills in a Unix
-or Unix like (Linux, BSD, Solaris, etc) environment.  I am willing to
+or Unix like (Linux, BSD, Solaris, etc) environment.  Willing to
 relocate for the right fit.
 
 \section{\centerline{LANGUAGES}}
@@ -25,34 +25,33 @@ Cal State Fullerton, BA Management Information Systems, 1997, Dean's List
 {\large \bf TVplus, Orange, CA \hfill August 2012 to Jan 2014}
 \begin{itemize}
 \item Designed, documented, and wrote a set of programs that would fetch
-data from third party sources (Freebase, DBpedia, etc) and transform it
+data from third party sources (Freebase, DBpedia, etc) and transform them
 for local use.  This involved meeting with mangement and figuring
-out how they needed the data presented.  Once decided upon, I created
-the data structures and wrote the code.
-This envovlved prototyping two ideas then ruling one out after getting
-more feedback.  There was a program to grab the raw data and write
-it to a local
-database.  The next program transformed it to a data structure that
+out how the data where going to be presented.  Once decided upon,
+the data structures were created, some ideas were prototyped, and
+the program was written.
+The program transformed the raw data to a data structure that
 was smaller and just enough for the presentation.  This new structure
 was stored in the local database for direct use by the presentation layer.
-The presentation
-was accessed from a REST api.  The presentation code would do some
-minor transforms (flatening or showing a specific node in the tree) on
-the stored data and present it.
+The presentation was accessed from a REST api.  The presentation
+code would do some minor transforms (flatening or showing a specific node
+in the tree) on the stored data and present the results.
 
-I used SQL Expression Language (SQLAlchemy) on PostgreSQL.
+\item Automated video processing work.  Before this work, there
+was a person who had to take videos and cut them up, insert blanks spots,
+and mute commercials, based on a set of time offsets provided to them.  They
+also had to generate a hash and upload it to a thirdpart and then edit
+a remote JSON config file.  This was automated using Python and ffmpeg.
+The user would submit the offset file and the program would do the rest.
 
-\item TMS parser scraper
-
-\item Automated the task of adding blank inserts and mutting
-videos (ffmpeg, python).
-
-\item Resonsible for the systems admin tasks for our in house
+\item Responsible for the sysadmin tasks for our in house
 network and servers.  Dealt with routing, firewall, working with ISP,
 DNS, installing software, etc.  Ran several database servers, a git
-server over ssh, iptables, BIND, Nginx.
+server over ssh, iptables, BIND, Nginx.  
 
 \item Participated in peer reviews of code.
+
+\item Linux, Python, SQL Expression Language (SQLAlchemy), PostgreSQL, MongoDB
 \end{itemize}
 
 {\large \bf Cisco, Irvine, CA (contractor) \hfill Oct 2011 to Jan 2012}
@@ -61,23 +60,23 @@ server over ssh, iptables, BIND, Nginx.
 \item Fixed bugs in configuration firmware that was used to configure
  routing tables, TCP/IP and  wireless settings.
 \item Crosscompiled for ARM and MIPS architectures
-\item Modified SAMBA (opensource codebase) to work better with OS X
+\item Modified SAMBA to work better with OS X.
 \item Linux, C, Bash, Javascript, TCP/IP
 \end{itemize}
 
 {\large \bf Axcelion, Huntington Beach, CA (contractor) \hfill Jan 2011 to Oct 2011}
 \begin{itemize}
 \item Added  C code to existing scheduler to allow cluster statistics to
-be accessed via TCP/IP socket
-\item Created python layer to interface javascript AJAX calls with
-socket data via JSON/RPC
+be accessed via TCP/IP socket.
+\item Created Python layer to interface javascript AJAX calls with
+socket data via JSON/RPC.
 \item Wrote caching layer to speed up the web interface at the cost of
-less timely data
+less timely data.
 \item Built a Javascipt interface to view statistics of a cluster with
 asynchronous updates, we used a tree data structure that loaded on
-demand as one navigated the tree
+demand as one navigated the tree.
 \item Created the front end in Javascript (Qooxdoo framework)
-\item Wrote and documented python module to allow python code to
+\item Wrote and documented Python module to allow Python code to
 access cluster statistics
 \item Linux, C, Python, Javascript, Qooxdoo
 \end{itemize}
@@ -86,12 +85,11 @@ access cluster statistics
 \begin{itemize}
 \item Installed Linux (CentOS) and did basic admin tasks.
 \item Worked on control software that was used in maintaining salt
-levels in nutrient solution and logging data from sensors.
+levels in nutrient solution and logging data from sensors to a UDP socket.
 \item These data provided inputs to be used in making small adjustments
 to prevent large swings in salinity.
 \item Linux, GCC, GNU Binutils, U-boot, ARM
 \end{itemize}
-
 
 {\large \bf Teradek, Irvine, CA (contractor) \hfill Jul 2008 to Dec 2008}
 \begin{itemize}
@@ -124,7 +122,7 @@ machine that would attempt to read a RFID tag in the area.
 \begin{itemize}
 
 \item Managed Apache web server that was used for running bug
-tracking system and web mail
+tracking system and web mail.
 
 \item Built custom Linux distribution to be installed on in-car
 computer where our navigation system was going to run.
@@ -132,15 +130,14 @@ computer where our navigation system was going to run.
 \item Wrote Python program that would let users view their location
 map, zoom, and scroll back in time to see where they had come from.
 
-\item Linux, Python, MySQL
-
+\item Linux, Python, Trac, MySQL
 
 \end{itemize}
 
 {\large \bf CreditVision, Pasadena, CA \hfill Nov 2006 to Jan Aug 2007}
 \begin{itemize}
 \item Maintained web app that used Python, Apache, and Oracle to
-provide customers with merged credit reports
+provide customers with merged credit reports.
 \item Installed and administered Linux, Apache, Oracle, Open BSD.
 \item Developed a web app that would allow users to log in and
 pull and merge credit reports.
@@ -160,9 +157,8 @@ box application stack.
 \item Created tools to interface with testing equipment used in
 running nightly load tests.
 
+\item Linux, C/C++, Java, GCC
 \end{itemize}
-
-Environment:  Linux, C/C++, Java, GCC
 
 {\large \bf ETAS, Santa Barbara, CA (contractor) \hfill Jan 20 to Jun 2006}
 \begin{itemize}
