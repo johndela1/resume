@@ -7,22 +7,15 @@ to debug in other languages by thinking about things from a functional
 point of view.
 
 I would consider my self someone who has worked on the full stack.  I've
-worked on projects where I was responsible for the database server,
-schema, middle layer code, web server, router/firewall, and even some front
-end javascript.
+worked on projects where I was responsible for the installation and
+configuration of the OS, DNS, database server, schema, server side code,
+web server, router/firewall, and even some front end javascript.
 
-I prefer a position where I am given some control over how to
-impliment the details, but have no problem learning new ways of doing
-things.
+When forced to write front end or GUI code, I usually use default
+widgets and colors expecting lots of feedback on asthetics issues.
 
-I've done a lot of programming
-	I've been the lead on several projects
-	I understand requirements change as the development process
-		reveals more insights.
-
-
-I've been a sysadmin
-	installed linux
-	ran BIND, etc
+I understand requirements change as the development process
+reveals more insights.  I am ok with things changing.  I am also a big
+fan of peer view and appreciate having my code seen by others and questioned.
 
 
