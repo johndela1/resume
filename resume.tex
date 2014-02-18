@@ -37,6 +37,12 @@ The presentation was accessed from a REST api.  The presentation
 code would do some minor transforms (flatening or showing a specific node
 in the tree) on the stored data and present the results.
 
+\item Rewrote a program that was used to download schedule and program
+data in the form of XML.  The data were added to and merged with existing
+data on a nightly basis.  This program ran in the background and
+proved to be very stable.  This was written in Python and used
+MongoDB as a database.
+
 \item Automated video processing work.  Before this work, there
 was a person who had to take videos and cut them up, insert blanks spots,
 and mute commercials, based on a set of time offsets provided to them.  They
