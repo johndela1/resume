@@ -1,4 +1,5 @@
 \documentclass{res}
+\usepackage{multicol}
 \newsectionwidth{0pt}
 \begin{document}
 \name{John de la Garza}
@@ -6,36 +7,44 @@
 
 \begin{resume}
 \thispagestyle{empty}
+\section{\centerline{Summary of Qualifications}}
+John de la Garza has been programming in a Linux environment for over
+10 years and is familure with programming in a variety of languages.
+He has expertise in backend/systems/network programming, working with
+databases, sysadmin tasks (DNS, webservers, firewall).  He is constantly
+learning and always looking to automate, minimize complexity, and
+create systems that are stable and easy to understand and debug when
+issues arise.
 
-\section{\centerline{OBJECTIVE}}
-A position that will utilize my programming and systems skills in a Unix
-or Unix like (Linux, BSD, Solaris, etc) environment.  Willing to
-relocate for the right fit.
+\begin{itemize}
+\item 
+Languages:  C, Python, Bash, Lua, Scheme, \LaTeX, IA32 assembly
+\item
+Systems:  Linux (x86, ARM, PPC), OpenBSD, Solaris (x86) U-Boot, KVM,
+AT91Bootstrap
+\item
+Education: Cal State Fullerton, BA Management Information Systems, 1997, Dean's List
+\end{itemize}
 
-\section{\centerline{LANGUAGES}}
-C, Python, Bash, Scheme, \LaTeX, Lua, IA32 assembly
 
-\section{\centerline{SYSTEMS}} Linux (x86, ARM, PPC), OpenBSD, U-Boot, AT91Bootstrap
-(especially interested in Linux kernel)
-
-\section{\centerline{EDUCATION}}
-Cal State Fullerton, BA Management Information Systems, 1997, Dean's List
 
 \section{\centerline{EXPERIENCE}}
 {\large \bf TVplus, Orange, CA \hfill August 2012 to Jan 2014}
 \begin{itemize}
 \item Designed, documented, and wrote a set of programs that would fetch
-data from third party sources (Freebase, DBpedia, etc) and transform them
+data from third party sources  and transform them
 for local use.  This involved meeting with mangement and figuring
 out how the data where going to be presented.  Once decided upon,
 the data structures were created, some ideas were prototyped, and
 the program was written.
 The program transformed the raw data to a data structure that
 was smaller and just enough for the presentation.  This new structure
-was stored in the local database for direct use by the presentation layer.
-The presentation was accessed from a REST api.  The presentation
-code would do some minor transforms (flatening or showing a specific node
-in the tree) on the stored data and present the results.
+was stored in the local database for direct use by the presentation
+layer.  The presentation was accessed from a REST api that provided
+the data using JSON.  The presentation code would do some minor
+transforms (flatening or showing a specific node in the tree) on the
+stored data and present the results.  This was done with python, and
+SQLAlchemy (on PostgreSQL).  The frontend was done with Flask.
 
 \item Rewrote a program that was used to download schedule and program
 data in the form of XML.  The data were added to and merged with existing
@@ -62,12 +71,10 @@ server over ssh, iptables, BIND, Nginx.
 
 {\large \bf Cisco, Irvine, CA (contractor) \hfill Oct 2011 to Jan 2012}
 \begin{itemize}
-\item Maintained startup scripts for USB udev events
 \item Fixed bugs in configuration firmware that was used to configure
- routing tables, TCP/IP and  wireless settings.
-\item Crosscompiled for ARM and MIPS architectures
+ routing tables, TCP/IP, and wireless settings.
+\item Cross compiled Linux for ARM and MIPS architectures
 \item Modified SAMBA to work better with OS X.
-\item Linux, C, Bash, Javascript, TCP/IP
 \end{itemize}
 
 {\large \bf Axcelion, Huntington Beach, CA (contractor) \hfill Jan 2011 to Oct 2011}
@@ -87,14 +94,17 @@ access cluster statistics
 \item Linux, C, Python, Javascript, Qooxdoo
 \end{itemize}
 
-{\large \bf RK Hdroponics, Huntington Beach, CA (contractor) \hfill Mar 2009 to Nov 2010}
+{\large \bf RK Hdroponics, Huntington Beach, CA \hfill Mar 2009 to Nov 2010}
 \begin{itemize}
-\item Installed Linux (CentOS) and did basic admin tasks.
-\item Worked on control software that was used in maintaining salt
-levels in nutrient solution and logging data from sensors to a UDP socket.
-\item These data provided inputs to be used in making small adjustments
-to prevent large swings in salinity.
-\item Linux, GCC, GNU Binutils, U-boot, ARM
+\item Got U-Boot and mainline kernel running on AT91 ARM hardware.
+\item Set up a basic system with custom kernel and Busy-Box.
+\item Created control software that was used in controlling salt levels
+in a hydroponic nutrient solution.  Samples would be read in from
+EC (electrical conductivity) sensor and used as feedback to a control
+loop which would add or withold water in order to keep salinity from rising.
+This prevented large swings in the salinity level, which made it possible
+to reuse the solution several times as opposed to being dumped after a 
+single use.
 \end{itemize}
 
 {\large \bf Teradek, Irvine, CA (contractor) \hfill Jul 2008 to Dec 2008}
@@ -103,25 +113,24 @@ to prevent large swings in salinity.
 \item Worked with TCP, UDP, and Unix sockets to manage video streams for
 a device with multiple cameras as inputs.
 \item Created Lua scripts to control video codec.
-\item Maintained build systems based on GNU Make and LTIB (build system)
 \item Cross compiled kernel modules and user space programs for various
 pieces of hardware on an embedded Linux platform; Devices such as USB
 ports, GPS modules, 802.11g adapters
-\item  Linux, PowerPC, ARM, GCC, Make, LTIB, U-Boot, Freescale BSP
 \end{itemize}
 
 {\large \bf Mojix, Los Angeles, CA (contractor) \hfill Jan 2008 to Apr 2008}
 \begin{itemize}
 
 \item Created an application that allowed an end user to interact
-with lower level motion tracking system; This consisted of a GUI
-that abstracted underlying command line programs.
+with lower level motion tracking system.  Users could specify polygons
+that would tell the system where to look for motion.  This involved
+building a GUI.  Some initial work was done with Tcl/Tk, but eventually
+we decided to write it in Python using PyGtk.
 
 \item Worked on motion detection system that used a CCD camera to sense
 events then send a message over the network (using UDP) to another
 machine that would attempt to read a RFID tag in the area.
 
-\item Linux, C, Python, UDP sockets, Tcl/TK, GCC, GDB, Valgrind
 \end{itemize}
 
 {\large \bf Tadpole, Torrance, CA (contractor) \hfill Aug 2007 to Dec 2007}
@@ -136,34 +145,24 @@ computer where our navigation system was going to run.
 \item Wrote Python program that would let users view their location
 map, zoom, and scroll back in time to see where they had come from.
 
-\item Linux, Python, Trac, MySQL
 
 \end{itemize}
 
 {\large \bf CreditVision, Pasadena, CA \hfill Nov 2006 to Jan Aug 2007}
 \begin{itemize}
-\item Maintained web app that used Python, Apache, and Oracle to
-provide customers with merged credit reports.
-\item Installed and administered Linux, Apache, Oracle, Open BSD.
-\item Developed a web app that would allow users to log in and
-pull and merge credit reports.
-\item Created a set of programs that would regularly create reports
-that would show if the reports we pulled were being used more than
-once and submit them to the credit bureaus.
-\item  Linux, Apache, Python, Oracle, Open BSD
-\end{itemize}
+\item
+Worked on existing web app that used mod\_perl, Apache, and Oracle to
+provide customers with merged credit reports.  When he started this
+job, the previous developer had just left on short notice.  Things where
+not stable and there was no documentation.  He got up to speed, fixed some
+of the bugs that caused the stability issues, and helped expand the system
+to provide redundancy for fail over.  When he left the company they had
+a system that was well documented and required very little maintenance.
 
-{\large \bf DirecTV, El Segundo, CA (contractor) \hfill Jun 2006 to Sep 2006}
+\item
+Installed and administered Linux, Apache, Oracle, Open BSD on off
+site server located in a nearby data center.
 
-\begin{itemize}
-
-\item Found and corrected bottlenecks and memory leaks in set top
-box application stack.
-
-\item Created tools to interface with testing equipment used in
-running nightly load tests.
-
-\item Linux, C/C++, Java, GCC
 \end{itemize}
 
 {\large \bf ETAS, Santa Barbara, CA (contractor) \hfill Jan 20 to Jun 2006}
@@ -172,7 +171,6 @@ running nightly load tests.
 system (ARM) for use in automotive industry.
 \item Involved forward porting of existing patches, and locating and applying
 new patches.
-\item  Linux on ARM, C, GCC, Bash, U-Boot
 \end{itemize}
 
 
@@ -188,39 +186,10 @@ SSL keys and certificates, shell scripts used to deploy apps and
 analyze log data to create reports.
 \item Developed remote deployment system using shell scripting and
 ssh.
-\item  Solaris, Oracle, Weblogic, Apache, shell, Perl, Python,
+\item  Worked with Solaris, Oracle, Weblogic, Apache, shell, Perl, Python,
 SQL, Linux, AIX, C, Java
 \end{itemize}
 
-{\large \bf Design Insites, Laguna Beach, CA \hfill Jun 1999 to April 2001}
-\begin{itemize}
-\item Created and maintained time tracking software for internal use.
-Swing based application that tied into a SQL database.
-\item Designed and developed back end solutions for dynamic web
-sites using JSP/Servlets with JDBC.
-\item System administrator for SCO-Unix and Linux boxes.
-\item Configured and maintained Apache web server and Tomcat Servlets
-engine.
-\item Used JNI to call some native C libs for porting a legacy database.
-\item  Java, C, Python, shell,  SQL, HTML, Linux, SCO-Unix
-\end{itemize}
-
-{\large \bf Tanner Research, Pasadena, CA \hfill Jun 1997 to April 1998}
-\begin{itemize}
-\item Maintained the code used in production, kept it running
-smoothly and looked for ways to improve efficiency
-\item Ported main production program from Pascal to C, and in doing
-so, added much needed functionality.
-\item Wrote numerous utility programs; initiated and wrote the
-installation programs that moved the company from shipping diskettes
-to shipping CDs as its main distribution media and as an option to
-be ready for electronic distribution.
-\item Added automation to production that resulted in less production
-man hours Developed routine in the production program that programmed
-hardware locks in a batch job instead of individually and automatically
-printed out corresponding labels.
-\item  Solaris, MS-DOS, C/C++, Pascal, shell
-\end{itemize}
 
 Bilingual in English and Spanish
 
@@ -228,3 +197,5 @@ References available upon request
 
 \end{resume}
 \end{document}
+
+
