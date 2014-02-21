@@ -8,63 +8,69 @@
 \begin{resume}
 \thispagestyle{empty}
 \section{\centerline{Summary of Qualifications}}
-John de la Garza has been programming in a Linux environment for over
-10 years and has programmed in a variety of languages.
-He has expertise in backend/systems/network programming, working with
-databases, sysadmin tasks (DNS, web servers, firewall).  He is constantly
-learning and always looking to automate, minimize complexity, and
-create systems that are stable and easy to understand and debug when
-issues arise.
-
 \begin{itemize}
-\item
-Languages:  C, Python, Bash, Lua, Scheme, \LaTeX, IA32 assembly
-\item
-Systems:  Linux (x86, ARM, PPC), OpenBSD, Solaris (x86) U-Boot, KVM,
+
+\item John de la Garza has been programming in a Linux environment for
+over 10 years and has programmed in a variety of languages.
+
+\item Expertise in backend/systems/network programming, working with
+databases, sysadmin tasks (DNS, web servers, firewall).
+
+\item Has built systems that are stable and easy to understand/debug
+when issues arise.
+
+\item Enjoys teaching, discussing code, and peer review.  \\
+
+\item Languages:  C, Python, Bash, Lua, Tcl/TK, Scheme, \LaTeX, IA32
+assembly
+
+\item Systems:  Linux (x86, ARM), OpenBSD, Solaris (x86), U-Boot, KVM,
 AT91Bootstrap
-\item
-Education: Cal State Fullerton, BA Management Information Systems, 1997, Dean's List
+
+\item Education: Cal State Fullerton, BA Management Information Systems,
+1997, Dean's List
+
 \end{itemize}
 
 \section{\centerline{EXPERIENCE}}
 {\large \bf TVplus, Orange, CA \hfill August 2012 to Jan 2014}
 \begin{itemize}
-\item Designed, documented, and wrote a set of programs that would fetch
-data from third party sources  and transform them
-for local use.  This involved meeting with management and figuring
-out how the data where going to be presented.  Once decided upon,
-the data structures were created, some ideas were prototyped, and
-the program was written.
-The program transformed the raw data to a data structure that
-was smaller and just enough for the presentation.  This new structure
-was stored in the local database for direct use by the presentation
-layer.  The presentation was accessed from a REST api that provided
-the data using JSON.  The presentation code would do some minor
-transforms (flattening or showing a specific node in the tree) on the
-stored data and present the results.  This was done with python, and
-SQLAlchemy (on PostgreSQL).  The front end was done with Flask.
+\item Designed, documented, and wrote a set of programs that would
+fetch data from third party sources  and transform them for local use.
+This involved meeting with management and figuring out how the data
+where going to be presented.  Once decided upon, the data structures
+were created, some ideas were prototyped, and the program was written.
+The program transformed the raw data to a data structure that was
+smaller and just enough for the presentation.  This new structure was
+stored in the local database for direct use by the presentation layer.
+The presentation was accessed from a REST api that provided the data
+using JSON.  The presentation code would do some minor transforms
+(flattening or showing a specific node in the tree) on the stored data
+and present the results.  This was done with python, and SQLAlchemy
+(on PostgreSQL).  The front end was done with Flask.
 
 \item Rewrote a program that was used to download schedule and program
 data in the form of XML.  The data were added to and merged with existing
-data on a nightly basis.  This program ran in the background and
-proved to be very stable.  This was written in Python and used
-MongoDB as a database.
+data on a nightly basis.  This program ran in the background and proved
+to be very stable.  This was written in Python and used MongoDB as
+a database.
 
-\item Automated video processing work.  Before this work, there
-was a person who had to take videos and cut them up, insert blanks spots,
-and mute commercials, based on a set of time offsets provided to them.  They
+\item Automated video processing work.  Before this work, there was a
+person who had to take videos and cut them up, insert blanks spots, and
+mute commercials, based on a set of time offsets provided to them.  They
 also had to generate a hash and upload it to a third part and then edit
 a remote JSON config file.  This was automated using Python and ffmpeg.
 The user would submit the offset file and the program would do the rest.
 
-\item Responsible for the sysadmin tasks for our in house
-network and servers.  Dealt with routing, firewall, working with ISP,
-DNS, installing software, etc.  Ran several database servers, a git
-server over ssh, iptables, BIND, Nginx.  
+\item Responsible for the sysadmin tasks for our in house network
+and servers.  Dealt with routing, firewall, working with ISP, DNS,
+installing software, etc.  Ran several database servers, a git server
+over ssh, iptables, BIND, Nginx.
 
 \item Participated in peer reviews of code.
 
-\item Linux, Python, SQL Expression Language (SQLAlchemy), PostgreSQL, MongoDB
+\item Linux, Python, SQL Expression Language (SQLAlchemy), PostgreSQL,
+MongoDB
 \end{itemize}
 
 {\large \bf Cisco, Irvine, CA (contractor) \hfill Oct 2011 to Jan 2012}
@@ -75,34 +81,48 @@ server over ssh, iptables, BIND, Nginx.
 \item Modified SAMBA to work better with OS X.
 \end{itemize}
 
-{\large \bf Axcelion, Huntington Beach, CA (contractor) \hfill Jan 2011 to Oct 2011}
+{\large \bf Axcelion, Huntington Beach, CA (contractor) \hfill Jan 2011
+to Oct 2011}
+
 \begin{itemize}
-\item Added  C code to existing scheduler to allow cluster statistics to
-be accessed via TCP/IP socket.
-\item Created Python layer to interface JavaScript AJAX calls with
-socket data via JSON/RPC.
+
+\item Added  C code to existing scheduler to allow cluster statistics
+to be accessed via TCP/IP socket.
+
+\item Created Python layer to interface JavaScript AJAX calls with socket
+data via JSON/RPC.
+
 \item Wrote caching layer to speed up the web interface at the cost of
 less timely data.
+
 \item Built a JavaScript interface to view statistics of a cluster with
-asynchronous updates, we used a tree data structure that loaded on
-demand as one navigated the tree.
+asynchronous updates, we used a tree data structure that loaded on demand
+as one navigated the tree.
+
 \item Created the front end in JavaScript (Qooxdoo framework)
-\item Wrote and documented Python module to allow Python code to
-access cluster statistics
+
+\item Wrote and documented Python module to allow Python code to access
+cluster statistics
+
 \item Linux, C, Python, JavaScript, Qooxdoo
+
 \end{itemize}
 
-{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to Nov 2010}
-\begin{itemize}
-\item Got U-Boot and mainline kernel running on AT91 ARM hardware.
+{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to Nov
+2010} \begin{itemize}
+
+\item Brought up U-Boot and the mainline kernel on AT91 ARM hardware.
+
 \item Set up a basic system with custom kernel and Busy-Box.
+
 \item Created control software that was used in controlling salt levels
-in a hydroponic nutrient solution.  Samples would be read in from
-EC (electrical conductivity) sensor and used as feedback to a control
-loop which would add or withhold water in order to keep salinity from rising.
+in a hydroponic nutrient solution.  Samples would be read in from EC
+(electrical conductivity) sensor and used as feedback to a control loop
+which would add or withhold water in order to keep salinity from rising.
 This prevented large swings in the salinity level, which made it possible
-to reuse the solution several times as opposed to being dumped after a 
+to reuse the solution several times as opposed to being dumped after a
 single use.
+
 \end{itemize}
 
 {\large \bf Teradek, Irvine, CA (contractor) \hfill Jul 2008 to Dec 2008}
@@ -148,44 +168,53 @@ map, zoom, and scroll back in time to see where they had come from.
 
 {\large \bf CreditVision, Pasadena, CA \hfill Nov 2006 to Jan Aug 2007}
 \begin{itemize}
-\item
-Worked on existing web application that used mod\_perl, Apache, and Oracle to
-provide customers with merged credit reports.  When he started this
-job, the previous developer had just left on short notice.  Things where
-not stable and there was no documentation.  He got up to speed, fixed some
-of the bugs that caused the stability issues, and helped expand the system
-to provide redundancy for fail over.  When he left the company they had
-a system that was well documented and required very little maintenance.
 
-\item
-Installed and administered Linux, Apache, Oracle, Open BSD on off
+\item Worked on existing web application that used mod\_perl, Apache,
+and Oracle to provide customers with merged credit reports.  When he
+started this job, the previous developer had just left on short notice.
+Things where not stable and there was no documentation.  He got up to
+speed, fixed some of the bugs that caused the stability issues, and
+helped expand the system to provide redundancy for fail over.  When he
+left the company they had a system that was well documented and required
+very little maintenance.
+
+\item Installed and administered Linux, Apache, Oracle, Open BSD on off
 site server located in a nearby data center.
 
 \end{itemize}
 
 {\large \bf ETAS, Santa Barbara, CA (contractor) \hfill Jan 20 to Jun 2006}
 \begin{itemize}
-\item Maintained and tested Linux kernel to run on an embedded
-system (ARM) for use in automotive industry.
-\item Involved forward porting of existing patches, and locating and applying
-new patches.
+
+\item Maintained and tested Linux kernel to run on an embedded system
+(ARM) for use in automotive industry.
+
+\item Involved forward porting of existing patches, and locating and
+applying new patches.
+
 \end{itemize}
 
 
 {\large \bf First American RES, Anaheim, CA \hfill May 2001 to April 2005}
 \begin{itemize}
-\item Wrote and maintained web-apps written mainly in Java that ran
-with Apache, Tomcat, and Weblogic on Linux and Solaris.
+
+\item Wrote and maintained web-apps written mainly in Java that ran with
+Apache, Tomcat, and Weblogic on Linux and Solaris.
+
 \item Designed and debugged automate build process.
+
 \item Maintained 40 to 45 production Linux servers that serve as
 web-servers, proxy servers, and application servers.
-\item Created and maintained configuration files,
-SSL keys and certificates, shell scripts used to deploy apps and
-analyze log data to create reports.
-\item Developed remote deployment system using shell scripting and
-ssh.
-\item  Worked with Solaris, Oracle, Weblogic, Apache, shell, Perl, Python,
-SQL, Linux, AIX, C, Java
+
+\item Created and maintained configuration files, SSL keys and
+certificates, shell scripts used to deploy apps and analyze log data to
+create reports.
+
+\item Developed remote deployment system using shell scripting and ssh.
+
+\item  Worked with Solaris, Oracle, Weblogic, Apache, shell, Perl,
+Python, SQL, Linux, AIX, C, Java.
+
 \end{itemize}
 
 
