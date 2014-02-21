@@ -1,5 +1,18 @@
 \documentclass{res}
 \usepackage{multicol}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\makeatletter
+\fancyhead[L]{\textbf{John de la Garza - john@jjdev.com}}
+\makeatother
+\fancyhead[R]{\thepage}
+\fancyheadoffset[L]{\sectionwidth}
+\setlength\headheight{12pt}
+\setlength\headsep{3pt}
+\addtolength\topmargin{-15pt}
+\AtBeginDocument{\thispagestyle{empty}}
+
 \newsectionwidth{0pt}
 \begin{document}
 \name{John de la Garza}
