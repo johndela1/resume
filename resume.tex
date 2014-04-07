@@ -60,7 +60,23 @@ There was a configuration system for specifying how remote structures
 would be mapped to local structures based on their type.  The top layer
 was an interface that provided functions to query and edit the data.
 
-\item Rewrote a program that was used to download schedule and program
+\item
+Wrote a program for reconciling schedule changes in a system that managed
+TV show schedules and associated content.  A schedule database
+contained the schedule for next two weeks and associated content was
+added to scheduled events based on their channel and their start time.
+Every 24 hours the schedules would get updated.  This could mean events
+where removed, added, or moved.  My system would make sure to reattach
+content for shows that moved in time (if it could be a match) and flag
+all other cases of disassociated content for human intervention.
+
+
+
+Main input was XML that
+described the programs and schedule for the next two weeks.  
+
+
+Rewrote a program that was used to download schedule and program
 data in the form of XML.  The data were added to and merged with existing
 data on a nightly basis.  This program ran in the background and proved
 to be very stable.  This was written in Python and used MongoDB as
