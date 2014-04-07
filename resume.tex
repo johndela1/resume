@@ -49,18 +49,16 @@
 
 \begin{itemize}
 
-\item Designed, documented, and wrote a set of programs that would
-fetch data from third party sources  and transform them for local use.
-This involved meeting with management and figuring out how the data
-where going to be presented.
-The program transformed the raw data to a data structure that was
-smaller and just enough for the presentation.  This new structure was
-stored in the local database for direct use by the presentation layer.
-The presentation was accessed from a REST api that provided the data
-using JSON.  The presentation code would do some minor transforms
-(flattening or showing a specific node in the tree) on the stored data
-and present the results.  This was done with python, and SQLAlchemy
-(on PostgreSQL).  The front end was done with Flask.
+\item
+
+Created a system for locally caching parts of a large remote database.
+Remote data was represented by a graph and the local data was a set
+of trees.  Each tree represented an entity or topic in the larger remote
+graph.  The cache provided write operations which made sure local
+changes where available immediately and pushed back to remote database.
+There was a configuration system for specifying how remote structures
+would be mapped to local structures based on their type.  The top layer
+was an interface that provided functions to query and edit the data.
 
 \item Rewrote a program that was used to download schedule and program
 data in the form of XML.  The data were added to and merged with existing
