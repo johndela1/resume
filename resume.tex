@@ -23,17 +23,16 @@
 \section{\centerline{Summary of Qualifications}}
 \begin{itemize}
 
-\item programming:
+\item Programming:
 	C, Python, Bash, Scheme, SQL, Lua, Tcl/TK, \LaTeX, IA32 assembly
 
-\item projects:
+\item Expertise:
 	network and systems programming, web application backends,
-	embedded systems, database driven applications
+	embedded systems, database driven applications;
+	TCP/IP, iptables, KVM, virtio, LXC, kernel, GNU toolchain,
+	various languages and frameworks
 
-\item Linux:
-	TCP/IP, iptables, KVM, virtio, LXC, kernel, GNU toolchain
-
-\item systems:
+\item Systems:
 	Linux (x86, ARM), OpenBSD, Solaris (x86), U-Boot, KVM,
 	AT91Bootstrap (AVR microcontroller)
 
@@ -54,55 +53,61 @@ Implemented cache layer for a large remote database.
 Remote data was represented by a graph and the local data was a set
 of trees.  Each tree represented an entity or topic in the graph.  The
 cache provided write operations which made sure local
-changes where available immediately and pushed back to remote database.
+changes where available immediately and pushed back to the remote database.
 There was a configuration system for specifying how remote structures
 would be mapped to local structures based on their type.  The top layer
 was an interface that provided functions to query and edit the data.
 
 \item
-Wrote a program for reconciling schedule changes in a system that managed
-TV show schedules and associated content.  A schedule database
+Wrote a program for reconciling schedule changes in a system that
+managed TV show schedules and associated content.  A database
 contained the schedule for next two weeks and associated content was
-added to scheduled events based on their channel and their start time.
+added to scheduled events based on their network (CBS, FOX, etc)
+and their start time.
 Every 24 hours the schedules would get updated.  This could mean events
-where removed, added, or moved.  My system would make sure to reattach
-content for shows that moved in time (if a match could be guessed) and flag
-all other cases of disassociated content for human intervention.
+where removed, added, or moved.  My system would try to reattach
+content for shows that moved in time (if a match could be guessed) and
+flag all other cases of disassociated content for human intervention.
 
 \item
 
 Created a system for transforming and hashing videos.  The input to this
 was a path to a video file and a list of tuples containing an operation code,
-time stamp, and a duration value.  The two operations where to either remove
-only audio or to remove audio and video for the time and duration specified.
+time stamp, and a duration value.  The two operations where to either only mute
+audio or to mute audio and replace video with a black screen for
+the time and duration specified.
 When requests came in they where validated and added to a
 persistent queue.  To process an item, a video file would be downloaded, then
 transcoded to H.264/AAC.  The file would be cut into pieces based on time and
-duration inputs.  Then reassembled with muted sections and/or blacked out
-silent sections.  Lots of this work was done in parallel and utilized
+duration inputs then reassembled with muted sections and/or blacked out
+sections.  Lots of this work was done in parallel and utilized
 16 cores well.  Once this was done a hash was generated on the audio file
 and uploaded to our audio matching server.  A request was sent to another 
 server to have it generate a different type of hash.  Once this was done
-the path to the hash was added to the audio matching server.
+the path to the second hash was added to the audio matching server.
 
-\item setup  development  environment using LXC to allow a single server
+\item
+Setup  development  environment using LXC to allow a single server
 to run several systems to approximate our production environment which
 was spread across many amazon EC2 nodes.
 
-\item Dealt with routing, firewall, working with ISP, DNS,
-installing software, etc.  Used ffmpeg, PostgreSQL, MongoDB, git server
-over ssh, iptables, BIND, Apache. 
+\item
+Dealt with routing, firewall, working with ISP, DNS,
+general systems administration.  Used ffmpeg, PostgreSQL, MongoDB, git server
+over ssh, iptables, BIND, Apache, Nginx, Python, Flask, geven
 
 \end{itemize}
 
 
-{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to Feb
+{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to May 2012}
+\begin{itemize}
 
-2012} \begin{itemize}
+\item
+Brought up U-Boot and the mainline kernel on AT91 ARM hardware.  Created
+a simple Linux system with BusyBox and small custom Linux kernel.
 
-\item Brought up U-Boot and the mainline kernel on AT91 ARM hardware.
-
-\item Created control and logging software that was used in controlling
+\item
+Created control and logging software that was used in controlling
 salt levels in a hydroponic nutrient solution and ran on small ARM board.
 Samples would be read
 in from EC (electrical conductivity) sensor and used as feedback
@@ -113,47 +118,31 @@ to reuse the solution several times as opposed to being dumped after a
 single use.  There was one controler per reservoir.  Data about water
 usage and EC readings where sent to a cental database.
 
-\items Front end allowed reporting based on statsistical data and allowed
+\item
+Front end allowed reporting based on statsistical data and allowed
 for configuration information to be passed to controller units.
 
 \end{itemize}
 
-{\large \bf Teradek, Irvine, CA (contractor) \hfill Jul 2008 to Dec 2008}
+{\large \bf Tadpole, Torrance, CA \hfill Aug 2007 to Dec 2008}
 \begin{itemize}
-\item Developed software in C that would run on ARM and PowerPC
+\item Developed software in C that would run on ARM and PowerPC.
 \item Worked with TCP, UDP, and Unix sockets to manage video streams for
 a device with multiple cameras as inputs.
 \item Created Lua scripts to control video codec.
 \item Cross compiled kernel modules and user space programs for various
 pieces of hardware on an embedded Linux platform; Devices such as USB
-ports, GPS modules, 802.11g adapters
+ports, GPS modules, 802.11g adapters.
 \end{itemize}
 
-{\large \bf Tadpole, Torrance, CA (contractor) \hfill Aug 2007 to Jun 2008}
-\begin{itemize}
-
-\item Managed Apache web server that was used for running bug
-tracking system and web mail.
-
-\item Built custom Linux distribution to be installed on in-car
-computer where our navigation system was going to run.
-
-\item Wrote Python package that would let users view their location
-map, zoom, and scroll back in time to see where they had come from
-and retrace their path.
-
-\item Worked on a small team to create a system where users could
-track the location of their friends and share areas of interest.
-
-\end{itemize}
 
 {\large \bf CreditVision, Pasadena, CA \hfill Nov 2006 to Jan Aug 2007}
 \begin{itemize}
 
 \item Worked on existing web application that used mod\_perl, Apache,
-and Oracle to provide customers with merged credit reports.  When he
+and Oracle to provide customers with merged credit reports.  When I
 started this job, the previous developer had just left on short notice.
-Things where not stable and there was no documentation.  He got up to
+Things where not stable and there was no documentation.  I got up to
 speed, fixed some of the bugs that caused the stability issues, and
 helped expand the system to provide redundancy for fail over.  When he
 left the company they had a system that was well documented and required
