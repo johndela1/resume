@@ -102,15 +102,20 @@ over ssh, iptables, BIND, Apache.
 
 \item Brought up U-Boot and the mainline kernel on AT91 ARM hardware.
 
-\item Created control software that was used in controlling salt levels
-in a hydroponic nutrient solution.  Samples would be read in from EC
-(electrical conductivity) sensor and used as feedback to a control loop
+\item Created control and logging software that was used in controlling
+salt levels in a hydroponic nutrient solution and ran on small ARM board.
+Samples would be read
+in from EC (electrical conductivity) sensor and used as feedback
+to a control loop
 which would add or withhold water in order to keep salinity from rising.
 This prevented large swings in the salinity level, which made it possible
 to reuse the solution several times as opposed to being dumped after a
-single use.
+single use.  There was one controler per reservoir.  Data about water
+usage and EC readings where sent to a cental database.
 
-\item each system reported 
+\items Front end allowed reporting based on statsistical data and allowed
+for configuration information to be passed to controller units.
+
 \end{itemize}
 
 {\large \bf Teradek, Irvine, CA (contractor) \hfill Jul 2008 to Dec 2008}
