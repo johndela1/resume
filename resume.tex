@@ -20,7 +20,9 @@
 
 \begin{resume}
 \thispagestyle{empty}
+
 \section{\centerline{Summary of Qualifications}}
+
 \begin{itemize}
 
 \item Programming:
@@ -28,17 +30,17 @@
 
 \item Expertise:
 	network and systems programming, web application backends,
-	embedded systems, database driven applications;
-	TCP/IP, iptables, KVM, virtio, LXC, kernel, GNU toolchain,
-	various languages and frameworks
+	embedded systems, database driven applications; TCP/IP, iptables,
+	KVM, virtio, LXC, kernel, GNU toolchain, various languages
+	and frameworks
 
 \item Systems:
 	Linux (x86, ARM), OpenBSD, Solaris (x86), U-Boot, KVM,
 	AT91Bootstrap (AVR microcontroller)
 
 \item Education:
-	Cal State Fullerton, BA Management Information Systems,
-	1997, Dean's List
+	Cal State Fullerton, BA Management Information Systems, 1997,
+	Dean's List
 
 \end{itemize}
 
@@ -48,151 +50,172 @@
 
 \begin{itemize}
 
-\item
-Implemented cache layer for a large remote database.
-Remote data was represented by a graph and the local data was a set
-of trees.  Each tree represented an entity or topic in the graph.  The
-cache provided write operations which made sure local
-changes where available immediately and pushed back to the remote database.
-There was a configuration system for specifying how remote structures
-would be mapped to local structures based on their type.  The top layer
-was an interface that provided functions to query and edit the data.
+\item Implemented cache layer for a large remote database.  Remote
+	data was represented by a graph and the local data was a
+	set of trees.  Each tree represented an entity or topic in
+	the graph.  The cache provided write operations which made sure
+	local changes where available immediately and pushed back to the
+	remote database.  There was a configuration system for specifying
+	how remote structures would be mapped to local structures based
+	on their type.	The top layer was an interface that provided
+	functions to query and edit the data.
 
 \item
-Wrote a program for reconciling schedule changes in a system that
-managed TV show schedules and associated content.  A database
-contained the schedule for next two weeks and associated content was
-added to scheduled events based on their network (CBS, FOX, etc)
-and their start time.
-Every 24 hours the schedules would get updated.  This could mean events
-where removed, added, or moved.  My system would try to reattach
-content for shows that moved in time (if a match could be guessed) and
-flag all other cases of disassociated content for human intervention.
+	Wrote a program for reconciling schedule changes in a system that
+	managed TV show schedules and associated content.  A database
+	contained the schedule for next two weeks and associated content
+	was added to scheduled events based on their network (CBS, FOX,
+	etc) and their start time.  Every 24 hours the schedules would
+	get updated.  This could mean events where removed, added,
+	or moved.  My system would try to reattach content for shows
+	that moved in time (if a match could be guessed) and flag all
+	other cases of disassociated content for human intervention.
+\item
+	Created a system for transforming and hashing videos.  The
+	input to this was a path to a video file and a list of tuples
+	containing an operation code, time stamp, and a duration value.
+	The two operations where to either only mute audio or to mute
+	audio and replace video with a black screen for the time and
+	duration specified.  When requests came in they where validated
+	and added to a persistent queue.  To process an item, a video
+	file would be downloaded, then transcoded to H.264/AAC.  The file
+	would be cut into pieces based on time and duration inputs then
+	reassembled with muted sections and/or blacked out sections.
+	Lots of this work was done in parallel and utilized 16 cores well.
+	Once this was done a hash was generated on the audio file and
+	uploaded to our audio matching server.	A request was sent to
+	another server to have it generate a different type of hash.
+	Once this was done the path to the second hash was added to the
+	audio matching server.
 
 \item
-
-Created a system for transforming and hashing videos.  The input to this
-was a path to a video file and a list of tuples containing an operation code,
-time stamp, and a duration value.  The two operations where to either only mute
-audio or to mute audio and replace video with a black screen for
-the time and duration specified.
-When requests came in they where validated and added to a
-persistent queue.  To process an item, a video file would be downloaded, then
-transcoded to H.264/AAC.  The file would be cut into pieces based on time and
-duration inputs then reassembled with muted sections and/or blacked out
-sections.  Lots of this work was done in parallel and utilized
-16 cores well.  Once this was done a hash was generated on the audio file
-and uploaded to our audio matching server.  A request was sent to another 
-server to have it generate a different type of hash.  Once this was done
-the path to the second hash was added to the audio matching server.
+	Setup  development  environment using LXC to allow a single
+	server to run several systems to approximate our production
+	environment which was spread across many amazon EC2 nodes.
 
 \item
-Setup  development  environment using LXC to allow a single server
-to run several systems to approximate our production environment which
-was spread across many amazon EC2 nodes.
-
-\item
-Dealt with routing, firewall, working with ISP, DNS,
-general systems administration.  Used ffmpeg, PostgreSQL, MongoDB, git server
-over ssh, iptables, BIND, Apache, Nginx, Python, Flask, geven
+	Dealt with routing, firewall, working with ISP, DNS, general
+	systems administration.  Used ffmpeg, PostgreSQL, MongoDB,
+	git server over ssh, iptables, BIND, Apache, Nginx, Python,
+	Flask, geven
 
 \end{itemize}
 
 
-{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to May 2012}
+{\large \bf RK Hydroponics, Huntington Beach, CA \hfill Mar 2009 to
+May 2012}
+
 \begin{itemize}
 
 \item
-Brought up U-Boot and the mainline kernel on AT91 ARM hardware.  Created
-a simple Linux system with BusyBox and small custom Linux kernel.
+	Brought up U-Boot and the mainline kernel on AT91 ARM hardware.
+	Created a simple Linux system with BusyBox and small custom
+	Linux kernel.
 
 \item
-Created control and logging software that was used in controlling
-salt levels in a hydroponic nutrient solution and ran on small ARM board.
-Samples would be read
-in from EC (electrical conductivity) sensor and used as feedback
-to a control loop
-which would add or withhold water in order to keep salinity from rising.
-This prevented large swings in the salinity level, which made it possible
-to reuse the solution several times as opposed to being dumped after a
-single use.  There was one controler per reservoir.  Data about water
-usage and EC readings where sent to a cental database.
+	Created control and logging software that was used in controlling
+	salt levels in a hydroponic nutrient solution and ran on
+	small ARM board.  Samples would be read in from EC (electrical
+	conductivity) sensor and used as feedback to a control loop which
+	would add or withhold water in order to keep salinity from rising.
+	This prevented large swings in the salinity level, which made
+	it possible to reuse the solution several times as opposed to
+	being dumped after a single use.  There was one controler per
+	reservoir.  Data about water usage and EC readings where sent
+	to a cental database.
 
 \item
-Front end allowed reporting based on statsistical data and allowed
-for configuration information to be passed to controller units.
+	Front end allowed reporting based on statsistical data and allowed
+	for configuration information to be passed to controller units.
 
 \end{itemize}
 
 {\large \bf Tadpole, Torrance, CA \hfill Aug 2007 to Dec 2008}
-\begin{itemize}
-\item Developed software in C that would run on ARM and PowerPC.
-\item Worked with TCP, UDP, and Unix sockets to manage video streams for
-a device with multiple cameras as inputs.
-\item Created Lua scripts to control video codec.
-\item Cross compiled kernel modules and user space programs for various
-pieces of hardware on an embedded Linux platform; Devices such as USB
-ports, GPS modules, 802.11g adapters.
-\end{itemize}
 
+\begin{itemize}
+
+\item
+	Developed software in C that would run on ARM and PowerPC.
+
+\item
+	Worked with TCP, UDP, and Unix sockets to manage video streams
+	for a device with multiple cameras as inputs.
+
+\item
+	Created Lua scripts to control video codec.
+
+\item
+	Cross compiled kernel modules and user space programs for various
+	pieces of hardware on an embedded Linux platform; Devices such
+	as USB ports, GPS modules, 802.11g adapters.
+\end{itemize}
 
 {\large \bf CreditVision, Pasadena, CA \hfill Nov 2006 to Jan Aug 2007}
+
 \begin{itemize}
 
-\item Worked on existing web application that used mod\_perl, Apache,
-and Oracle to provide customers with merged credit reports.  When I
-started this job, the previous developer had just left on short notice.
-Things where not stable and there was no documentation.  I got up to
-speed, fixed some of the bugs that caused the stability issues, and
-helped expand the system to provide redundancy for fail over.  When he
-left the company they had a system that was well documented and required
-very little maintenance.
+\item
+	Worked on existing web application that used mod\_perl, Apache,
+	and Oracle to provide customers with merged credit reports.
+	When I started this job, the previous developer had just
+	left on short notice.  Things where not stable and there was
+	no documentation.  I got up to speed, fixed some of the bugs
+	that caused the stability issues, and helped expand the system
+	to provide redundancy for fail over.  When he left the company
+	they had a system that was well documented and required very
+	little maintenance.
 
-\item Installed and administered Linux, Apache, Oracle, Open BSD on off
-site server located in a nearby data center.
-
+\item
+	Installed and administered Linux, Apache, Oracle, Open BSD on
+	off site server located in a nearby data center.
 \end{itemize}
 
-{\large \bf ETAS, Santa Barbara, CA (contractor) \hfill Jan 2006 to Jun 2006}
+{\large \bf ETAS, Santa Barbara, CA (contractor) \hfill Jan 2006 to
+Jun 2006}
+
 \begin{itemize}
 
-\item Maintained and tested Linux kernel to run on an embedded system
-(ARM) for use in automotive industry.
+\item
+	Maintained and tested Linux kernel to run on an embedded system
+	(ARM) for use in automotive industry.
 
-\item Involved forward porting of existing patches, and locating and
-applying new patches.
+\item
+	Involved forward porting of existing patches, and locating and
+	applying new patches.
 
 \end{itemize}
 
 
 {\large \bf First American RES, Anaheim, CA \hfill May 2001 to April 2005}
+
 \begin{itemize}
 
-\item Wrote and maintained web-apps written mainly in Java that ran with
-Apache, Tomcat, and Weblogic on Linux and Solaris.
+\item
+	Wrote and maintained web-apps written mainly in Java that ran
+	with Apache, Tomcat, and Weblogic on Linux and Solaris.
+\item
+	Designed and debugged automate build process.
+\item
+	Maintained 40 to 45 production Linux servers that serve as
+	web-servers, proxy servers, and application servers.
+\item
+	Created and maintained configuration files, SSL keys and
+	certificates, shell scripts used to deploy apps and analyze log
+	data to create reports.
 
-\item Designed and debugged automate build process.
+\item
+	Developed remote deployment system using shell scripting and ssh.
 
-\item Maintained 40 to 45 production Linux servers that serve as
-web-servers, proxy servers, and application servers.
-
-\item Created and maintained configuration files, SSL keys and
-certificates, shell scripts used to deploy apps and analyze log data to
-create reports.
-
-\item Developed remote deployment system using shell scripting and ssh.
-
-\item  Worked with Solaris, Oracle, Weblogic, Apache, bash, Perl,
-Python, SQL, Linux, AIX, C, Java.
+\item
+	Worked with Solaris, Oracle, Weblogic, Apache, bash, Perl,
+	Python, SQL, Linux, AIX, C, Java.
 
 \end{itemize}
-
 
 Bilingual in English and Spanish
 
 References available upon request
 
 \end{resume}
+
 \end{document}
-
-
