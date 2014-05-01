@@ -1,4 +1,3 @@
-Timothy Tsai	949-378-5296
 Glen Farnsworth	714 420 1849  
 Robert Lee	714 312 6626
 Evan Cofsky	213 537 9836
@@ -7,8 +6,8 @@ John Flemming	714-606-9036
 Ray Tayek	562 272 8556
 
 
-Darek Senkow darek@senkow.com 231 670 0706
-Mike Duffy Mike.Duffy@Axceleon.com	714 960 5229
-Aditya Patil aditya@itibit.com 213 300 9120
-
+Darek Senkow	darek@senkow.com		231 670 0706
+Mike Duffy	Mike.Duffy@Axceleon.com		714 960 5229
+Aditya Patil	aditya@itibit.com		213 300 9120
+Timothy Tsai	tstsai@gmail.com		949-378-5296
 
