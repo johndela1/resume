@@ -26,13 +26,12 @@
 \begin{itemize}
 
 \item Programming:
-	C, Python, Bash, Scheme, SQL, Lua, Tcl/TK, \LaTeX, IA32 assembly
+	C, Python, Bash, Lisp, SQL, Lua, Tcl/TK, \LaTeX, IA32 assembly
 
 \item Expertise:
 	network and systems programming, backend systems, embedded
-	systems, database driven applications; TCP/IP, iptables, KVM,
-	virtio, LXC, kernel, GNU toolchain, various languages and
-	frameworks, git
+	systems, database driven applications; TCP/IP, KVM, kernel,
+	GNU toolchain, git
 
 \item Systems:
 	Linux (x86, ARM), OpenBSD, Solaris (x86), U-Boot, KVM,
@@ -53,16 +52,16 @@
 \item Implemented cache layer for a large remote database.  Remote
 	data was represented by a graph and the local data was a
 	set of trees.  Each tree represented an entity or topic in
-	the graph.  The cache provided write operations which made sure
-	local changes where available immediately and pushed back to the
-	remote database.  There was a configuration system for specifying
-	how remote structures would be mapped to local structures based
-	on their type.	The top layer was an interface that provided
-	functions to query and edit the data.
+	the graph.  The cache provided read and write operations.  Write
+	operations made sure local changes where available immediately and
+	pushed back to the remote database.  There was a configuration
+	system for specifying how remote structures would be mapped
+	to local structures based on their type.  The top layer was an
+	interface that provided functions to query and edit the data.
 
 \item
-	Wrote a program for reconciling schedule changes in a system that
-	managed TV show schedules and associated content.  A database
+	Wrote a program for reconciling schedule changes in a system
+	that managed TV show schedules and associated content.	A database
 	contained the schedule for next two weeks and associated content
 	was added to scheduled events based on their network (CBS, FOX,
 	etc) and their start time.  Every 24 hours the schedules would
