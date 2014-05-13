@@ -1,5 +1,5 @@
-503 299 6811 opportunities@vanderhouwen.com
-858 560 8331 contact@hightechpros.com
+503 299 6811 opportunities@vanderhouwen.com, auto response
+858 560 8331 contact@hightechpros.com, auto response
 503 293 9547 triadjobs@go2triad.com
 503 610 1009 ITCandidates@CompetitiveEdgeRecruiting.com
 877 624 6100 resumes@mainzbradygroup.com
@@ -15,3 +15,8 @@ jeffr@triadgroup.com
 direct:
 jobs@substantial.com
 jobs@stratos.com
+
+
+talked to:
+From: Rob Gross <ROBG752@kellyit.com>
+
