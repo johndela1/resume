@@ -51,47 +51,23 @@
 \begin{itemize}
 
 \item
-	Worked with Amazon AWS to build systems.
+	Worked on team of 5 people to build tools around a cloud-based
+	environment.  We used some custom python code to manage
+	different clould environments and we used Chef to deploy code
+	across 100's of AWS nodes.
 
-	Shared on call duty to respond to afterhours production
-	issues
+	Wrote a set of programs in Ruby which assited in a large port
+	from one type of configuraton system (attributes and chef environment)
+	to a existing in house system that was newly created to make the data
+	available over HTTPS.
 
-	=====================
-DevOps Engineers at Rally Health work incredibly close with our engineering and product teams to help design, implement, and scale our predominantly Scala and MongoDB based architecture. We are obsessively focused on maintaining high availability for all of the services we manage, while also implementing the infrastructure solutions that our product teams need in order to succeed.
+	Repurposed many of the programs described above to be used in a
+	library which assited in making common changes across many
+	configuration databases as we went forward with the new configuration
+	system.
 
-We're looking for an Operations Engineer to help us augment and build tools around our cloud­based environment 
+    	Participated in 7x24 on-call rotation.
 
-    You believe in automating everything -- configuration management isn't just a good idea but a requirement
-    You are dedicated to building a robust infrastructure free of single points of failure
-
-    You live and breathe open source tools and most importantly, you give back to the community
-
-------
-
-
-
-If you have implemented and supported a cutting edge public cloud environment on top of: AWS, MongoDB, CDN, ELB; 
-
-Responsibilities: 
-
-    Build and maintain a highly fault tolerant infrastructure on public cloud
-    Build and document cutting-edge automation tools to improve capacity and velocity for software engineers and production operations
-    Collaborate with our development team to implement and evolve solutions for a wide array of challenging projects
-    Improve provisioning, automation, configuration, integration, deployment and release processes
-    Mentor, train and develop team members for career progression and learning
-    Participate in 7x24 on-call rotation
-
-Here's what you need:
-
-    Strong Linux system administration, network troubleshooting skills
-    Strong experience using open source tools; Apache, Nginx, WebApps
-    Strong Programming experience in Ruby and/or Python
-    Managed large Cloud production deployments, using Chef and/or Puppet
-    Extensive experience managing and supporting very large-scale, public-facing websites
-    Hosted and cloud-based service experience; EC2/AWS and/or Rackspace
-
-
-	=====================
 \end{itemize}
 
 {\large \bf TVplus, Orange, CA \hfill August 2012 to Jan 2014}
@@ -173,21 +149,30 @@ Oct 2011}
 \begin{itemize}
 
 \item
-	Brought up U-Boot and the mainline kernel on AT91 ARM hardware.
-	Created a simple Linux system with BusyBox and small custom
-	Linux kernel.
+	Brought up U-Boot and the mainline Linux kernel on AT91 ARM
+	hardware.  Created a simple Linux system with BusyBox and small
+	custom Linux kernel.
 
 \item
-	Created control and logging software that was used in controlling
-	salt levels in a hydroponic nutrient solution and ran on small ARM
-	board.	Samples would be read in from EC (electrical conductivity)
-	sensor over i2c bus and used as feedback to a control loop which
-	would add or withhold water in order to keep salinity from rising.
-	This prevented large swings in the salinity level, which made
-	it possible to reuse the solution several times as opposed to
-	being dumped after a single use.  There was one controller per
-	reservoir.  Data about water usage and EC readings where sent
-	to a central database.
+	Created firmware that ran on an ATmega328P MCU based electrical
+	conductivity (EC) meter which provided
+	an I2C interface to a circuit that would measure the 
+	EC of a solution and provide a corresponding voltage
+	to a 10 bit ADC.  The EC value was used to estimate the salinity of
+	a solution.  The firmware provided a way to read, calibrate, get
+	statistics, and persists settings to an EEPROM.
+
+\item
+	Created userspace control and logging software that was used in
+	controlling salt levels in a hydroponic nutrient solution and
+	ran on the ARM board.  EC samples
+	where read from the sensor unit over i2c bus and used as feedback
+	to a control loop which would add or withhold water in order to
+	keep salinity levels stable.  This prevented large swings in the
+	salinity level, which made it possible to reuse the solution
+	several times as opposed to being dumped after a single use.
+	There was one controller per reservoir.  Data about water usage
+	and EC readings where sent to a central database.
 
 \item
 	Front end allowed reporting based on statistical data and allowed
@@ -200,6 +185,9 @@ Oct 2011}
 \begin{itemize}
 
 \item
+	hacked devices driver code to work with custom video codec
+	hardware, clocks
+\item
 	Worked with TCP, UDP, and Unix sockets to manage video streams
 	for a device with multiple cameras as inputs.
 
@@ -210,9 +198,6 @@ Oct 2011}
 	Cross compiled kernel modules and user space programs for various
 	pieces of hardware on an embedded Linux platform; devices such
 	as USB controllers, GPS modules, 802.11g adapters.
-
-\item
-	Developed software in C that would run on ARM and PowerPC platforms.
 
 \end{itemize}
 
