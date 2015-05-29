@@ -21,28 +21,21 @@
 \begin{resume}
 \thispagestyle{empty}
 
-\section{\centerline{Summary of Qualifications}}
+\section{\centerline{Expertise}}
 
-\begin{itemize}
+I have worked at many levels of software stacks on things like network
+programming, embedded systems, database driven applications.  I familure
+with tweaking and running Linux on various platforms.
 
-\item Programming:
-	C, Python, Bash, Awk, Ruby, Lisp, Lua, Perl, Tcl/TK, \LaTeX, x86
-	and ARM assembler, SQL
+C, Python, Bash, Awk, Ruby, Lisp, Lua, Perl, Tcl/TK, \LaTeX, x86 and
+ARM assembler, SQL
 
-\item Expertise:
-	opensource/free software
+git, GNU toolchain (GCC, make, GDB, Binutils), TCP/IP, KVM, perf, iperf,
+vmstat, tcddump, U-Boot, Apache, PostgreSQL, various HTTP and REST frameworks
 
-	network and systems programming, back end systems, embedded
-	systems, database driven applications, TCP/IP, kernel,
-	GNU toolchain (GCC, make, GDB, Binutils), git
-
-	Linux (x86, ARM), OpenBSD, U-Boot
-
-\item Education:
+Formal Education:
 	Cal State Fullerton, BA Management Information Systems, 1997,
 	Dean's List
-
-\end{itemize}
 
 \section{\centerline{Experience}}
 
@@ -56,15 +49,20 @@
 	different clould environments and we used Chef to deploy code
 	across 100's of AWS nodes.
 
-	Wrote a set of programs in Ruby which assited in a large port
-	from one type of configuraton system (attributes and chef environment)
+\item
+	Wrote a set of programs in Ruby which were used in a large port
+	from one type of configuration system (attributes and chef environment)
 	to a existing in house system that was newly created to make the data
 	available over HTTPS.
 
-	Repurposed many of the programs described above to be used in a
-	library which assited in making common changes across many
+\item
+
+	Re-purposed many of the programs described above to be used in a
+	library which was used to make common changes across many
 	configuration databases as we went forward with the new configuration
 	system.
+
+\item
 
     	Participated in 7x24 on-call rotation.
 
@@ -131,15 +129,19 @@
 \begin{itemize}
 
 \item
-	Fixed bugs in configuration firmware that was used to configure
-	TCP/IP settings on residential Cisco routers.
+	Worked on a small team to do bug fixes for existing firmware that was
+	used to configure network settings on routers over a HTTP interface.
+	This was mostly done in C.  These devices used U-Boot and ran Linux
+	on ARM and MIPS chips.
+
 \item
-	Cross compiled Linux kernel and U-boot for ARM and MIPS
-	architectures
+	Wrote various shell scripts that where run at boot time and did
+	basic setup for a media sharing service using Samba.
+
 \item
 	I left the position due to cancellation of product I was
-	working on.  The person I worked under can provide a
-	reference.
+	working on.  The person I worked under can provide a reference.
+\item
 
 \end{itemize}
 
@@ -151,32 +153,28 @@ Oct 2011}
 \item
 	Brought up U-Boot and the mainline Linux kernel on AT91 ARM
 	hardware.  Created a simple Linux system with BusyBox and small
-	custom Linux kernel.
+	Linux kernel.
 
 \item
-	Created firmware that ran on an ATmega328P MCU based electrical
-	conductivity (EC) meter which provided
-	an I2C interface to a circuit that would measure the 
-	EC of a solution and provide a corresponding voltage
-	to a 10 bit ADC.  The EC value was used to estimate the salinity of
-	a solution.  The firmware provided a way to read, calibrate, get
-	statistics, and persists settings to an EEPROM.
+	Created firmware and device driver for an ATmega328P MCU
+	based electrical conductivity (EC) meter which provided an I2C
+	interface to a circuit that would measure the EC of a solution.
+	The EC value was used to estimate the salinity of a solution.
+	The firmware provided a way to read, calibrate, get statistics,
+	and persists settings to an EEPROM.
 
 \item
-	Created userspace control and logging software that was used in
+	Wrote userspace control and logging software that was used in
 	controlling salt levels in a hydroponic nutrient solution and
-	ran on the ARM board.  EC samples
-	where read from the sensor unit over i2c bus and used as feedback
-	to a control loop which would add or withhold water in order to
-	keep salinity levels stable.  This prevented large swings in the
-	salinity level, which made it possible to reuse the solution
-	several times as opposed to being dumped after a single use.
-	There was one controller per reservoir.  Data about water usage
-	and EC readings where sent to a central database.
+	ran on the ARM board.  EC readings, from the device described
+	above, where used as feedback to a control loop which would add
+	or withhold water in order to keep salinity levels stable.
+	This prevented large swings in the salinity level, which made
+	it possible to reuse the solution several times as opposed to
+	being dumped after a single use.  There was one controller per
+	reservoir.  Data about water usage and EC readings where sent
+	to a central database over UDP using wifi.
 
-\item
-	Front end allowed reporting based on statistical data and allowed
-	for configuration information to be passed to controller units.
 
 \end{itemize}
 
@@ -185,8 +183,9 @@ Oct 2011}
 \begin{itemize}
 
 \item
-	hacked devices driver code to work with custom video codec
-	hardware, clocks
+	Wrote device drivers for various pieces of custom hardware such
+	as clocks, input devices, hardware video codecs.
+
 \item
 	Worked with TCP, UDP, and Unix sockets to manage video streams
 	for a device with multiple cameras as inputs.
@@ -196,8 +195,8 @@ Oct 2011}
 
 \item
 	Cross compiled kernel modules and user space programs for various
-	pieces of hardware on an embedded Linux platform; devices such
-	as USB controllers, GPS modules, 802.11g adapters.
+	pieces of hardware on an embedded Linux (ARM and PPC) platform;
+	devices such as USB controllers, GPS modules, 802.11g adapters.
 
 \end{itemize}
 
