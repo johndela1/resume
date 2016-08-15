@@ -1,12 +1,12 @@
-resume: resume.pdf
-	mupdf  resume.pdf
+resume: john_delagarza_resume.pdf
+	mupdf  john_delagarza_resume.pdf
 
-cover: cover.pdf
-	#mupdf cover.pdf
+cover: john_delagarza_cover.pdf
+	mupdf john_delagarza_cover.pdf
 
-cover.pdf: cover.tex
-	pdflatex cover.tex
+john_delagarza_cover.pdf: john_delagarza_cover.tex
+	pdflatex john_delagarza_cover.tex
 
-resume.pdf: resume.tex
-	pdflatex resume.tex
+john_delagarza_resume.pdf: john_delagarza_resume.tex
+	pdflatex john_delagarza_resume.tex
 
