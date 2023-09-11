@@ -12,9 +12,11 @@
   \begin{itemize}
 
   \item
-    language: Python, C, Lua, Perl, SQL, shell scripting, Javascript, Go
+    language: Python, Bash, C, Go, Perl, SQL, Lua, Javascript
   \item
-    technologies: Linux, PostgreSQL, Tornado, Flask, Django, MySQL, Redis, AWS
+      technology: AWS, HTTP, RDBMS, Redis, DNS, terraform, Linux (user and kernel)
+  \item
+      Experienced in interviewing and mentoring
   \end{itemize}
 
   \section{WORK EXPERIENCE}
@@ -22,7 +24,56 @@
   {\large \bf Blackberry/Cylance, Irvine, CA \hfill April 2019 to Sep 2023}
   \begin{itemize}
   \item
-  did random stuff
+    Was primary contact/maintainer of core system that supported a
+    security product.  Worked with small team to do a variety of tasks
+    like developing new code, fixing bugs, deployments, sustaining,
+    testing, and operations.
+
+  \item
+    We where the first team called when one of our core services would
+    have customer issues. This involved tracking down the cause in
+    a distributed system with lots of moving parts and getting a fix
+    deployed.
+
+  \item
+    Frequently pair programed with others that where newer to the job
+    to get them up to speed on using git consistently and learning how
+    to run/develop/debug the different microservices.
+
+  \item
+Created new and took ownership of many core legacy microservices that
+provided a set of APIs used mainly by our Javascript web app as well as
+customers calling them from their own scripts.
+
+Based on the fact that our core services where IO bound we choose
+to use an asynchronous Python3 framework called 'Tornado' for many
+of the microservices. Asyncio in Python is based on coroutines that
+cooperatively yield control (instead of blocking) while waiting on
+IO/blocking operations. This allows a single process to handle many
+requests concurrently.  We had a backend of PostgreSQL (RDBMS) and Redis
+(caching and pub/sub).
+
+Other teams did things in Lua and Go. Which we eventually owned due to
+the creators quiting.
+
+  \item
+We became experts how things got deployed, on AWS services, and how to
+debug when there are many endpoints envolved.  A typical week could
+looking like working on a P0 production issue, adding new features,
+addressing bug reports, and tunning (based on performance testing) the
+AWS settings for all of the stuff we used.  For example Lambda, ASG,
+ECS, ElacticCache, Kinesis, Route53, etc.
+
+  \item
+One of the more interesting things was the use of openresty/lua (an app server
+that is forked from nginx).  This system had a listening socket on the
+internet that customer devices would connect to with a websocket, the endpoint
+would use this bidirection socket to send and receive.  Incomming messages
+where routed to a set of Kinesis streams where Lambdas would pick them up and
+process them.  While outgoing messages would originate in a webapp (for
+example) and get sent to one of  the HTTP micoroservices.  This would result
+in a series of events that would ultimately publish the commands to a pub/sub
+message bus, where the openrest code would pick it up and send it down the socket.
   \end{itemize}
 
   {\large \bf Comscore, Portland, OR \hfill Nov 2016 to Dec 2018}
@@ -97,7 +148,7 @@
     to be published.  This service was deployed on AWS using Chef.
   \item
     Created a program that would run on a cron job.  It would pull down
-    XML data, process, and idempotently insert into a local database.
+    XML data, process, and insert into a local database.
   \item
     Python, Ruby, Linux, shell scripting
 
