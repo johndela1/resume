@@ -1,5 +1,5 @@
 resume: john_delagarza_resume.pdf
-	mupdf -r200 john_delagarza_resume.pdf
+	xpdf -z 300 john_delagarza_resume.pdf
 
 cover: john_delagarza_cover.pdf
 	mupdf john_delagarza_cover.pdf
