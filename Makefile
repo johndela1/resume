@@ -1,4 +1,4 @@
-resume: john_delagarza_resume.pdf
+resume: resume.pdf
 	xpdf -z 300 john_delagarza_resume.pdf
 
 cover: john_delagarza_cover.pdf
@@ -7,9 +7,9 @@ cover: john_delagarza_cover.pdf
 clean:
 	rm *.aux *.log *.pdf
 
-john_delagarza_cover.pdf: john_delagarza_cover.tex
-	pdflatex john_delagarza_cover.tex
+cover.pdf: cover.tex
+	pdflatex -jobname=john_delagarza_cover cover
 
-john_delagarza_resume.pdf: john_delagarza_resume.tex
-	pdflatex john_delagarza_resume.tex
+resume.pdf: resume.tex
+	pdflatex -jobname=john_delagarza_resume resume
 
