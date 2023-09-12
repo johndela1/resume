@@ -1,8 +1,8 @@
 resume: resume.pdf
 	xpdf -z 300 john_delagarza_resume.pdf
 
-cover: john_delagarza_cover.pdf
-	mupdf john_delagarza_cover.pdf
+cover: cover.pdf
+	xpdf -z 300  john_delagarza_cover.pdf
 
 clean:
 	rm *.aux *.log *.pdf
