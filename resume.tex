@@ -1,36 +1,33 @@
 \documentclass{res}
 
 \begin{document}
-
 \name{John de la Garza}
-
 \address{john@jjdev.com - (657) 400 9422 - Westminster, CA 92683}
 
 \begin{resume}
   \section{SKILLS}
-
   \begin{itemize}
-
   \item
     language: Python, Bash, C, Go, Perl, SQL, Lua, Javascript
   \item
-      programming: My favorite thing to do.  My goals are to manage
-      complexity.  This means using the correct levels of abstraction,
-      not coupling things that although seem related are not, using
-      good/consistent names.  I strive to write code that is mostly unit
-      testable in seconds and the rest can be done with integration
-      tests which are a better fit for testing stuff that does IO.
-      This keeps tests fast and removes the need for mocking.
+      technology: HTTP, RDBMS (PostgreSQL, MySQL), DNS (BIND, Route53), Terraform, Linux (user and kernel), AWS (Lambda, ASG, ECS, ElasticCache (Redis), Kinesis, Security groups, etc)
   \item
-      technology: HTTP, RDBMS, DNS, Terraform, Linux (user and
-      kernel), AWS, Lambda, ASG, ECS, ElasticCache (Redis), Kinesis,
-      Route53, etc
+      interviewing and mentoring
   \item
-      experienced with interviewing and mentoring
+      programming: manage complexity 
+    \begin{itemize}
+    \item
+        correct levels of abstraction for composability
+    \item
+        not coupling things that although seem related are not, allows
+    \item
+        bottom up thinking
+    \item
+        good/consistent names
+    \end{itemize}
   \end{itemize}
 
   \section{WORK EXPERIENCE}
-
   {\large \bf Blackberry/Cylance, Irvine, CA \hfill Apr 2019 to Sep 2023}
   \begin{itemize}
   \item
@@ -38,19 +35,16 @@
     security product.  Worked with small team to do a variety of tasks
     like developing new code, fixing bugs, deployments, sustaining,
     testing, and operations.
-
   \item
     We where the first team called when there was a customer facing
     issue. We would determine where in the system it was broken, who
     owned it, and most of the time fix it.  This involved tracking down
     the cause in a distributed system with lots of moving parts and
     getting a fix deployed.
-
   \item
     Frequently pair programmed with others that where newer to the job
     to get them up to speed on using git consistently and learning how
     to run/develop/debug the different micro-services.
-
   \item
 Based on the fact that our core services where IO bound
 an asynchronous Python3 framework called 'Tornado' was used for many
@@ -109,38 +103,29 @@ message bus, where the openresty code would pick it up and send it down the sock
   \end{itemize}
 
   {\large \bf Idealist.org, Portland, OR \hfill Jul 2015 to Jul 2016}
-
-  \begin{itemize} \item
+  \begin{itemize}
+    \item
     Worked on a small team creating an HTTPS REST API that needed
     to inter-operate with an existing model, database, and messaging
     system. It provided HTTPS endpoints to allow other systems to post
     jobs in an automated fashion.  This involved doing
     a deep dive into the existing code to fully understand the existing
     architecture.
-
     \item
-
     Was involved in the creation of a new system that would allow
     customers to bulk post job listings.  It was available to the end users
     as an REST API where they could submit jobs, check status, etc.
     It was consistent, well documented, and designed to be discoverable.
-
-  \item
-
+    \item
     Wrote shell scripts to create chroot based sandbox.  This provided
     a reproducible development environment on individual developer
     computers.
-
     \item
-
     There was a lot of collaboration.  Code reviews where almost always
     done.  We frequently pair programmed when it came to work on the
     more tricky parts.  Work was done in two week sprints.
-
   \item
-
     Python, Flask, SQLAlchemy, PostgreSQL, Linux, RabbitMQ, Redis, AWS
-
   \end{itemize}
 
   {\large \bf Rally, Wash, DC \hfill Jun 2014 to Mar 2015}
