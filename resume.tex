@@ -6,139 +6,113 @@
 \pagenumbering{arabic}
 \begin{resume}
     Love programming and building systems. Have worked on things
-    from microcontrollers to distributed systems and everything in
+    from low-level code to distributed systems and everything in
     between. Discovering how things work and problem solving are two of my
-    strengths and will have no trouble with any new hire learning curve.
+    strengths.
 
 \section{SKILLS}
 \begin{itemize}
   \item
-    domain: distributed systems, cloud infrastructure, Kubernetes, backend systems
+    domain: Linux, distributed systems, cloud infrastructure, backend
   \item
-    language: Python, Go, C, SQL, Rust, Bash, Perl, Lua, JavaScript, Ruby, Lisp, X86 and ARM asm
+    language: Python, Go, SQL, Rust, Bash, C, Perl, Lua, JavaScript, Ruby, Lisp
   \item
-    technology: Linux user space and kernel, TCP/IP, PostgreSQL, MySQL, DNS BIND, Route53, AWS, Redis, Nginx, OpenBSD, Tornado, Flask,
-    WebSockets, firewalls, SQLAlchemy, Netbox, FastAPI, Prometheus, Grafana, Django
+    technology: AWS, Kubernetes, PostgreSQL, MySQL, Redis, DNS, Route53, Nginx,
+    OpenBSD, Tornado, Flask, TCP/IP, WebSockets, SQLAlchemy, Netbox, FastAPI,
+    Prometheus, Grafana, Django
   \end{itemize}
 
 \section{WORK EXPERIENCE}
 
-  {\large \bf Cloudflare, San Fransisco, CA, Systems Engineer \hfill 6/2024 to 5/2026}
+  {\large \bf Cloudflare, San Francisco, CA, Systems Engineer \hfill 6/2024 to 5/2026}
   \begin{itemize}
   \item
-    maintained netbox plugin and asset ingestion systems
+    SME for asset ingestion pipelines and Netbox as source of truth,
+    owning plugins and integrations between the two systems.
   \item
-    lead projects end to end.  from gathering customer  requirements, writing RFCs, creating specs, test plans, to deployment and follow up
+    Led projects end to end: gathering requirements, writing RFCs, creating specs, test plans, documentation, code review, deployment, monitoring with Grafana, and follow up
 
   \item
-    worked with hardware vendors to automate how hardware data was loaded into our core systems. involved moving from them sending us spreadsheets, to using HTTP API on a scheduled task, removing humans from the loop, for hardware asset ingestion.
+    Built a self-service UI component in the Netbox plugin enabling users
+    to create hardware part-number to model-number mappings, eliminating
+    manual spreadsheet-based ticket workflows.
 
- \item
-    provided validation code to assert that all redundant data are in sync with source of truth
+  \item
+    Automated server data ingestion with a Kubernetes cron job hitting a vendor API,
+    using Pydantic models with strict validation and SQLAlchemy/PostgreSQL constraints
+    before pushing into Netbox via the asset ingestion pipeline, saving colleagues from manual processing.
 
+  \item
+    Built a two-stage reconciliation pipeline: detect diffs between device-reported state
+    (collected via Kafka from node agents) and Netbox,
+    then auto-resolve approved fields in Netbox per RFC-defined rules.
+  \item
+    Wrote test coverage for all new code and refactored existing code in the
+    Netbox plugin and HAWAI ingestion pipeline, reducing mocking overhead and
+    improving test execution speed.
+  \item
+    Triaged provisioning issues and Airflow DAG failures, performing root
+    cause analysis and routing to the appropriate team for resolution.
   \end{itemize}
 
   {\large \bf Blackberry, Irvine, CA, Senior Software Engineer \hfill 4/2019 to 9/2023}
   \begin{itemize}
   \item
-    Led design, feature improvements, and maintenance for our core
-    systems which provided a REST API backend to a complex enterprise
-    security product.  Was responsible for a variety of tasks including
-    developing new code, fixing bugs, deployments, sustaining, testing,
-    and operations.  Develop was done in mostly in Go and Python.
+    Led design and development of a REST API backend for an enterprise
+    security product, spanning feature work, bug fixes, deployments, and
+    operations.  Development was done mostly in Go and Python.
   \item
-    Was one of the first responders when there was a customer-facing
-    issue.  This involved tracking down the cause in a distributed system
-    with lots of moving parts and getting a fix deployed.
+    First responder for customer-facing incidents, tracking root causes
+    across distributed services and deploying fixes.
   \item
     Frequently pair programmed with others that were newer to the job
     to get them up to speed on using git consistently and learning how
     to run/develop/debug the different microservices.
   \item
-    Based on the fact that our core services were I/O bound, an
-    asynchronous Python3 framework called Tornado was used for many of
-    the microservices. Asyncio in Python is based on coroutines that
-    cooperatively yield control (instead of blocking) while waiting on
-    blocking operations. This allows a single process to handle many
-    requests concurrently.  We had a backend of PostgreSQL (RDBMS),
-    Redis (caching and pub/sub).
+    Transitioned several services from Python to Go.
   \item
-    Was instrumental in transitioning several services from Python to Go.
-  \item
-    One of the more interesting things was the use of OpenResty/Lua (an
-    application server that is forked from Nginx).  This system had a
-    listening socket on the Internet that customer devices would connect
-    to with a web-socket, the endpoint would use this bidirectional
-    socket to send and receive.  Incoming messages were routed to a set
-    of Kinesis streams where Lambdas would pick them up and process them.
-    While outgoing messages originating in a web application (for example)
-    would get sent to one of  the HTTP microservices.  This would result
-    in a series of events that would ultimately publish the commands
-    to a pub/sub message bus, where the OpenResty code would pick it up
-    and send it down the socket.
-  \item
-    Go, Async Python, PostgreSQL, MySQL, AWS, Redis, Kinesis,
-    Lambdas, S3, Route 53, WebSockets, Protocol Buffers, Lua, SQLAlchemy
+    Used OpenResty/Lua to build a bidirectional WebSocket gateway routing messages between customer devices, Kinesis streams, and internal HTTP microservices via pub/sub.
   \end{itemize}
 
   {\large \bf Comscore, Portland, OR, Senior Software Engineer \hfill 11/2016 to 12/2018}
   \begin{itemize}
   \item
-    Worked on a distributed system that was designed to count watched ads
-    and determine who watched them.  The system consisted of retrievers to
-    download data from clients, importers to normalize and store the bulk
-    of the data into a custom in-house parallel database, summarizers
-    to store summary data into an RDBMS for use by the web front end,
-    queuing subsystem, and exporters to transmit results back to clients.
+    Worked on a distributed system that counted watched ads and determined
+    who watched them, handling data ingestion, normalization, summarization,
+    and export pipelines.
   \item
-    Created composable command line tools that acted as a language to
-    assist in understanding incoming data and creating custom reports to
-    be built combining these tools with some high level scripts.
-  \item
-    Participated in regular code reviews.
-  \item
-    C/C++, Perl, Python, RDBMS
+    Built composable command-line tools that acted as a query language for
+    analyzing incoming data and generating custom reports.
   \end{itemize}
 
-  {\large \bf Idealist.org, Portland, OR, Senior Developer \hfill 7/2015 to 7/Jul 2016}
+  {\large \bf Idealist.org, Portland, OR, Senior Developer \hfill 7/2015 to 7/2016}
   \begin{itemize}
     \item
     Worked on a team creating a REST API that needed
     to inter-operate with an existing model, database, and messaging
     system. It provided HTTPS endpoints to allow other systems to post
-    jobs in an automated fashion.  This involved doing
-    a deep dive into the existing code to fully understand the existing
-    architecture.
+    jobs in an automated fashion.  This involved doing a deep dive into
+    the code to fully understand the existing architecture.
     \item
-    Was involved in the creation of a new system that would allow
+    Created a new system that allowed
     customers to bulk post job listings.  It was available to the end users
     as a REST API where they could submit jobs, check status, etc.
     It was consistent, well-documented, and designed to be discoverable.
     \item
-    Wrote shell scripts to create a chroot based sandbox.  This provided
+    Wrote shell scripts to create a chroot-based sandbox.  This provided
     a reproducible development environment on individual developer
     computers.
-    \item
-    There was a lot of collaboration.  Code reviews were almost always
-    done.  We frequently pair programmed when working on the
-    more tricky parts.  Work was done in two-week sprints.
-    \item
-    Python, Go, PostgreSQL, AWS, SQLAlchemy
   \end{itemize}
 
   {\large \bf Rally, Washington, DC, Operations Engineer \hfill 6/2014 to 3/2015}
 
   \begin{itemize}
   \item
-    Implemented a configuration system that used HTTP to
-    internally publish configuration files that lived in a git repository.
-    Pushing to the configuration repository triggered the new files
-    to be published.  This service was deployed on AWS using Chef.
+    Implemented a git-backed HTTP configuration system using Chef on AWS
+    that auto-published on push, eliminating manual file distribution.
   \item
-    Created a program that would run on a cron job.  It would pull down
-    XML data, process it, and insert it into a local database.
-  \item
-    Chef, Ruby, Python, AWS
+    Created a cron job that pulled down
+    XML data, process them, and insert them into a local database.
   \end{itemize}
 
   {\large \bf TVplus, Orange, CA, Senior Developer \hfill 8/2012 to 1/2014}
@@ -146,39 +120,25 @@
   \item
     Designed and implemented a read/write caching layer for a
     REST API which was used by a JavaScript front end.
-    Remote data was represented by a graph and the
-    local data was a set of trees that could be lazily loaded. 
   \item
     Designed and implemented a system to daily download XML data
     that represented TV program schedules for the next two weeks and
-    merge/load them into a local database.  This could mean scheduled
-    shows were removed, added, or rescheduled.  The system would try
-    to re-attach content for shows that were rescheduled (if a match
-    could be guessed) and flag all other cases of disassociated content
-    for human intervention.
+    merge/load them into a local database.
+    This could mean scheduled shows were removed, added, or rescheduled,
+    flagging disassociated content for human review.
   \item
-    Created a service that took a URL to a video file and a description
-    that specified how to edit the video.  The goal was to mute audio
-    and replace the video with a black screen for the times and durations
-    specified and then transcode to H.264/AAC.
-
-    Once the new video file was created, a hash was generated and uploaded
-    to an audio-matching service. A request was sent to another server
-    to have it generate a different type of hash.  Once this was done
-    the path to the second hash was added to an audio-matching server.
-
-    Most of this processing was done in parallel and utilized multiple cores
-    well.
+    Created a service to edit video files (mute segments, transcode to H.264/AAC)
+    and upload hashes to an audio-matching service, with processing parallelized
+    across multiple cores.
   \item
-    Set up a development environment using LXC to allow a single server to
-    run several systems to approximate our production environment which
-    was spread across many Amazon EC2 nodes.
-  \item
-    Python, C, Tornado, Flask, PostgreSQL, AWS
+    Set up an LXC-based development environment on a single server to
+    replicate a multi-node AWS production stack.
   \end{itemize}
 
-Formal Education: Cal State Fullerton, BA Management Information Systems, Dean's List
+\section{EDUCATION}
+Cal State Fullerton, BA Management Information Systems, Dean's List
 
-Languages: English and Spanish
+\section{SPOKEN LANGUAGES}
+English and Spanish
 \end{resume}
 \end{document}
