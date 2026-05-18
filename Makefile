@@ -11,5 +11,5 @@ cover.pdf: cover.tex
 	pdflatex -jobname=john_delagarza_cover cover
 
 resume.pdf: resume.tex
-	pdflatex -jobname=john_delagarza_resume resume
+	pdflatex -jobname=john_delagarza_resume resume && rm john_delagarza_resume.log
 
