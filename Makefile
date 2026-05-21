@@ -1,3 +1,5 @@
+all: resume cover
+
 resume: resume.pdf
 	open john_delagarza_resume.pdf
 
