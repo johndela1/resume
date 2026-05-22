@@ -31,7 +31,7 @@
   {\large \bf Cloudflare, San Francisco, CA, Systems Engineer \hfill 6/2024 to 5/2026}
   \begin{itemize}
   \item
-    Owned and maintained the asset ingestion pipeline that pulls asset
+    Owned and maintained the asset ingestion system that pulls asset
     data from vendor APIs and creates corresponding records in Netbox.
     Onboarded new vendors end-to-end: defining schemas and specs,
     coordinating with vendors on data format and delivery, and
@@ -41,34 +41,25 @@
     spreadsheet-upload process so assets appeared in Netbox
     automatically, eliminating significant toil for the hardware team.
   \item
-    Built a rack-integrator automation pipeline to eliminate manual
+    Automated rack-integrator data ingestion to eliminate manual
     tracking and spreadsheet reconciliation for a complex multi-party
     asset handoff flow.
-  \item
-    Led projects end to end: gathering requirements, writing RFCs, creating specs, test plans, documentation, code review, deployment, monitoring with Grafana, and follow-up
   \item
     Built a self-service UI component in the Netbox plugin enabling users
     to create hardware part-number to model-number mappings, eliminating
     manual spreadsheet-based ticket workflows.
   \item
-    Automated server data ingestion with a Kubernetes cron job hitting a vendor API,
-    using Pydantic models with strict validation and SQLAlchemy/PostgreSQL constraints
-    before pushing into Netbox via the asset ingestion pipeline, saving colleagues from manual processing.
-  \item
-    Built a two-stage reconciliation pipeline: detect diffs between device-reported state
-    (collected via Kafka from node agents) and Netbox,
-    then auto-resolve approved fields in Netbox per RFC-defined rules.
+    Built a reconciliation system which subscribbed to a messages
+    bus were devices published their state. Then detect diffs between
+    device-reported state and Netbox, then resolve approved fields
+    in Netbox per RFC-defined rules on automatic resolution.
   \item
     Wrote test coverage for all new code and refactored existing code in the
-    Netbox plugin and HAWAI ingestion pipeline, reducing mocking overhead and
+    Netbox plugin and asset ingestion system, reducing mocking overhead and
     improving test execution speed.
   \item
-    Triaged provisioning issues and Airflow DAG failures, performing root
-    cause analysis and routing to the appropriate team for resolution.
-  \item
-    Used AI-assisted development tools (opencode) to direct AI coding agents
-    for feature implementation, code review, test generation, and refactoring,
-    accelerating development velocity across the asset management platform.
+    Supported network engineers as part of a regular on-call rotation,
+    troubleshooting provisioning issues with root cause analysis.
   \end{itemize}
 
   {\large \bf Blackberry, Irvine, CA, Senior Software Engineer \hfill 4/2019 to 9/2023}
