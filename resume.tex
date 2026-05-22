@@ -31,21 +31,29 @@
   {\large \bf Cloudflare, San Francisco, CA, Systems Engineer \hfill 6/2024 to 5/2026}
   \begin{itemize}
   \item
-    SME for asset ingestion pipelines and Netbox as source of truth,
-    owning plugins and integrations between the two systems.
+    Owned and maintained the asset ingestion pipeline that pulls asset
+    data from vendor APIs and creates corresponding records in Netbox.
+    Onboarded new vendors end-to-end: defining schemas and specs,
+    coordinating with vendors on data format and delivery, and
+    collaborating with cross-functional teams internally.
+  \item
+    Automated hardware vendor asset ingestion, replacing a manual
+    spreadsheet-upload process so assets appeared in Netbox
+    automatically, eliminating significant toil for the hardware team.
+  \item
+    Built a rack-integrator automation pipeline to eliminate manual
+    tracking and spreadsheet reconciliation for a complex multi-party
+    asset handoff flow.
   \item
     Led projects end to end: gathering requirements, writing RFCs, creating specs, test plans, documentation, code review, deployment, monitoring with Grafana, and follow-up
-
   \item
     Built a self-service UI component in the Netbox plugin enabling users
     to create hardware part-number to model-number mappings, eliminating
     manual spreadsheet-based ticket workflows.
-
   \item
     Automated server data ingestion with a Kubernetes cron job hitting a vendor API,
     using Pydantic models with strict validation and SQLAlchemy/PostgreSQL constraints
     before pushing into Netbox via the asset ingestion pipeline, saving colleagues from manual processing.
-
   \item
     Built a two-stage reconciliation pipeline: detect diffs between device-reported state
     (collected via Kafka from node agents) and Netbox,
