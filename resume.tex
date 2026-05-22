@@ -43,16 +43,18 @@
   \item
     Automated rack-integrator data ingestion to eliminate manual
     tracking and spreadsheet reconciliation for a complex multi-party
-    asset handoff flow.
+    asset hand-off flow.
   \item
     Built a self-service UI component in the Netbox plugin enabling users
     to create hardware part-number to model-number mappings, eliminating
     manual spreadsheet-based ticket workflows.
   \item
-    Built a reconciliation system which subscribbed to a messages
-    bus were devices published their state. Then detect diffs between
-    device-reported state and Netbox, then resolve approved fields
-    in Netbox per RFC-defined rules on automatic resolution.
+    Built a reconciliation system which kept our asset data source of truth
+    synchronized with what the hardware was reporting.  Devices
+    would run agents which would publish device state to a message
+    bus.  Reconciler would subscribe to bus and detect diffs between
+    device-reported state and Netbox.  Updates would be made if the
+    data was easy to update otherwise a person would be notified.
   \item
     Wrote test coverage for all new code and refactored existing code in the
     Netbox plugin and asset ingestion system, reducing mocking overhead and
