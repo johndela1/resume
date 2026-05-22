@@ -52,9 +52,9 @@
     Built a reconciliation system which kept our asset data source of truth
     synchronized with what the hardware was reporting.  Devices
     would run agents which would publish device state to a message
-    bus.  Reconciler would subscribe to bus and detect diffs between
+    bus.  Reconciler would subscribe to the bus and detect diffs between
     device-reported state and Netbox.  Updates would be made if the
-    data was easy to update otherwise a person would be notified.
+    data was easy to update, otherwise a person would be notified.
   \item
     Wrote test coverage for all new code and refactored existing code in the
     Netbox plugin and asset ingestion system, reducing mocking overhead and
