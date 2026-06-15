@@ -1,17 +1,14 @@
 all: resume cover
 
-resume: resume.pdf
-	open john_delagarza_resume.pdf
+resume: john_delagarza_resume.pdf
+	open $<
 
-cover: cover.pdf
-	open john_delagarza_cover.pdf
+cover: john_delagarza_cover.pdf
+	open $<
 
 clean:
-	rm *.aux *.log *.pdf
+	rm -f *.aux *.log *.pdf
 
-cover.pdf: cover.tex
-	pdflatex -jobname=john_delagarza_cover cover
-
-resume.pdf: resume.tex
-	pdflatex -jobname=john_delagarza_resume resume && rm john_delagarza_resume.log
+%.pdf: %.tex
+	pdflatex $< && rm -f *.log *.aux
 
